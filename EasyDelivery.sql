@@ -16,7 +16,7 @@ PRIMARY KEY(Customer_ID)
 );
 
 DESCRIBE Customer;
-DROP TABLE Customer;
+DROP TABLE Customer cascade;
 
 CREATE TABLE DeliveryAddress(
 Customer_ID VARCHAR(6) NOT NULL,
@@ -35,7 +35,7 @@ PRIMARY KEY(Premium_Member_ID)
 );
 
 DESCRIBE PremiumMember;
-DROP TABLE PremiumMember;
+-- DROP TABLE PremiumMember;
 
 CREATE TABLE Employee(
 Employee_ID VARCHAR(4) NOT NULL,
@@ -56,7 +56,7 @@ FOREIGN KEY(Premium_Member_ID) REFERENCES PremiumMember(Premium_Member_ID) ON DE
 );
 
 DESCRIBE Employee;
-DROP TABLE Employee;
+-- DROP TABLE Employee;
 
 CREATE TABLE PhoneNumber(
 Employee_ID VARCHAR(4) NOT NULL,
@@ -67,7 +67,7 @@ FOREIGN KEY(Employee_ID) REFERENCES Employee(Employee_ID) ON DELETE CASCADE
 );
 
 DESCRIBE PhoneNumber;
-DROP TABLE PhoneNumber;
+-- DROP TABLE PhoneNumber;
 
 CREATE TABLE OrdinaryCustomer(
 Customer_ID VARCHAR(6) NOT NULL,
@@ -76,7 +76,7 @@ FOREIGN KEY(Customer_ID) REFERENCES Customer(Customer_ID) ON DELETE CASCADE
 );
 
 DESCRIBE OrdinaryCustomer;
-DROP TABLE OrdinaryCustomer;
+-- DROP TABLE OrdinaryCustomer;
 
 CREATE TABLE SilverMember(
 Customer_ID VARCHAR(6) NOT NULL,
@@ -87,7 +87,7 @@ FOREIGN KEY(Premium_Member_ID) REFERENCES PremiumMember(Premium_Member_ID) ON DE
 );
 
 DESCRIBE SilverMember;
-DROP TABLE SilverMember;
+-- DROP TABLE SilverMember;
 
 CREATE TABLE Staff(
 Employee_ID VARCHAR(4) NOT NULL,
