@@ -104,3 +104,7 @@ SELECT Employee.First_Name AS Employee_First_Name, Employee.Middle_Name AS Emplo
 FROM (Employee
 INNER JOIN PremiumMember ON Employee.Premium_Member_ID = PremiumMember.Premium_Member_ID);
 
+# Find the supermarket that have most different products in stock
+
+
+# For each product, list all the supermarket selling it, and the price of the product at the supermarket
