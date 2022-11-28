@@ -293,7 +293,7 @@ DROP TABLE Sell;
 
 CREATE TABLE Orders(
 Order_ID VARCHAR(10) NOT NULL UNIQUE,
-CHECK(REGEXP_LIKE(Order_ID, '#[0-9]{9}')), #Pound key is the delimiter
+CHECK(REGEXP_LIKE(Order_ID, '[0-9]{9}')), #Pound key is the delimiter
 Shop_ID VARCHAR(5) NOT NULL,
 Employee_ID VARCHAR(4) NOT NULL,
 Plate_Number VARCHAR(7) NOT NULL,
@@ -306,8 +306,9 @@ FOREIGN KEY(Employee_ID) REFERENCES Deliverer(Employee_ID) ON DELETE CASCADE,
 FOREIGN KEY(Plate_Number) REFERENCES Vehicle(Employee_ID) ON DELETE CASCADE
 );
 
+
 DESCRIBE Orders;
-DROP TABLE Orders;
+DROP TABLE Orders CASCADE;
 
 CREATE TABLE Payment(
 Payment_Confirm_Number VARCHAR(10) NOT NULL,
@@ -323,4 +324,4 @@ FOREIGN KEY(Order_ID) REFERENCES Orders(Order_ID) ON DELETE CASCADE
 );
 
 DESCRIBE Payment;
-DROP TABLE Payment;
+DROP TABLE Payment CASCADE;
