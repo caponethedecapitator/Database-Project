@@ -293,7 +293,7 @@ DROP TABLE Sell;
 
 CREATE TABLE Orders(
 Order_ID VARCHAR(10) NOT NULL UNIQUE,
-CHECK(REGEXP_LIKE(Order_ID, '#[0-9]{9}')),
+CHECK(REGEXP_LIKE(Order_ID, '#[0-9]{9}')), #Pound key is the delimiter
 Shop_ID VARCHAR(5) NOT NULL,
 Employee_ID VARCHAR(4) NOT NULL,
 Plate_Number VARCHAR(7) NOT NULL,
