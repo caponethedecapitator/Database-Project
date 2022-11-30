@@ -1,36 +1,94 @@
-#AreaManager
+SELECT * FROM Customer;
+INSERT INTO Customer VALUES('C14527', "Jim",Null ,"Nguyen", '2012-01-30', 5734678921);
+INSERT INTO Customer VALUES('C21134', "Peter",Null ,"Park", '2015-11-22', 4938491723);
+
+
+SELECT * FROM DeliveryAddress;
+INSERT INTO  VALUES();
+
+SELECT * FROM PremiumMember;
+INSERT INTO  VALUES();
+
+#Employee
+SELECT * FROM Employee;
+INSERT INTO Employee VALUES('E331', 'John', 'K.', 'White', '130 Hass Street', 'M', '1995-03-10', '2020-12-15', NULL);
+INSERT INTO Employee VALUES('E178', 'Leo', Null, 'Huffman', '221 Hass Street', 'M', '1992-05-11', '2020-12-15', NULL);
+
+-- Delete from Employee where Employee_ID = 'E178';
+
+SELECT * FROM PhoneNumber;
+INSERT INTO  VALUES();
+
+SELECT * FROM OrdinaryCustomer;
+INSERT INTO  VALUES();
+
+SELECT * FROM SilverMember;
+INSERT INTO  VALUES();
+
+SELECT * FROM Staff;
+INSERT INTO  VALUES();
+
 SELECT * FROM AreaManager;
 INSERT INTO AreaManager VALUES('E331', "Plano");
 
-# Make Contract
+SELECT * FROM Deliverer;
+INSERT INTO  VALUES();
+
+SELECT * FROM MemberCard;
+INSERT INTO  VALUES();
+
+SELECT * FROM Vehicle;
+INSERT INTO  VALUES();
+
+SELECT * FROM MealPass;
+INSERT INTO  VALUES();
+
+SELECT * FROM Shop;
+INSERT INTO  VALUES();
+
+SELECT * FROM OpeningTime;
+INSERT INTO  VALUES();
+
+SELECT * FROM ClosingTime;
+INSERT INTO  VALUES();
+
 SELECT * FROM MakeContract;
-INSERT INTO  VALUES('E111');
-INSERT INTO  VALUES('E237');
-INSERT INTO  VALUES('E983');
-INSERT INTO  VALUES('E764');
-INSERT INTO  VALUES('E123');
-INSERT INTO  VALUES('E468');
-INSERT INTO  VALUES('E083');
-INSERT INTO  VALUES('E763');
-INSERT INTO  VALUES('E394');
-INSERT INTO  VALUES('E094');
-INSERT INTO  VALUES('E875');
-INSERT INTO  VALUES('E346');
-INSERT INTO  VALUES('E986');
-INSERT INTO  VALUES('E999');
+INSERT INTO  VALUES();
 
+SELECT * FROM Promotion;
+INSERT INTO  VALUES();
 
+SELECT * FROM Comment;
+INSERT INTO  VALUES();
 
-# Restaurants
+SELECT * FROM Restaurant;
+INSERT INTO  VALUES();
 
-# Restaurant Type
+SELECT * FROM RestaurantType;
+INSERT INTO  VALUES();
 
+SELECT * FROM Supermarket;
+INSERT INTO  VALUES();
 
+SELECT * FROM Product;
+INSERT INTO  VALUES();
+
+SELECT * FROM Sell;
+INSERT INTO  VALUES();
 
 SELECT * FROM Orders;
-INSERT INTO Orders VALUES(248194927, "S2", "E173", "EJW5342", 3, "Good!")
+INSERT INTO Orders VALUES("248194927", "S2", "E173", "EJW5342", 3, "Good!")
 
-# Orders
+SELECT * FROM Payment;
+INSERT INTO  VALUES();
 
-# Payment
+
+
+
+
+
+
+
+
+
 
