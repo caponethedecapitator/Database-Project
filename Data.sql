@@ -2,7 +2,6 @@
 SELECT * FROM AreaManager;
 INSERT INTO AreaManager VALUES('E331', "Plano");
 
-<<<<<<< HEAD
 # Make Contract
 SELECT * FROM MakeContract;
 INSERT INTO  VALUES('E111');
@@ -25,7 +24,6 @@ INSERT INTO  VALUES('E999');
 # Restaurants
 
 # Restaurant Type
-=======
 
 
 
@@ -35,7 +33,6 @@ INSERT INTO Employee VALUES('E331', 'John', 'K.', 'White', '130 Hass Street', 'M
 INSERT INTO Employee VALUES('E178', 'Leo', Null, 'Huffman', '221 Hass Street', 'M', '1992-05-11', '2020-12-15', NULL);
 
 -- Delete from Employee where Employee_ID = 'E178';
->>>>>>> parent of c7c778b (sh)
 
 
 
