@@ -1,5 +1,7 @@
 # Customers - 9
 SELECT * FROM Customer;
+INSERT INTO Customer VALUES('C14527', "Jim",Null ,"Nguyen", '2012-01-30', 5734678921);
+INSERT INTO Customer VALUES('C21134', "Peter",Null ,"Park", '2015-11-22', 4938491723);
 INSERT INTO Customer VALUES('C12345', "John", NULL, "Joans", '2022-10-2', '4692478579');
 INSERT INTO Customer VALUES('C12346', "Susan", "Bishop", "Mckay", '2002-6-7', '8721527870');
 INSERT INTO Customer VALUES('C22390', "Karen", "Grace", "Barns", '2010-1-1', '9345452231');
@@ -44,6 +46,9 @@ INSERT INTO PremiumMember VALUES('P08234');
 
 # Employee - 14 (7 for shops / 7 for restaurants)
 SELECT * FROM Employee;
+INSERT INTO Employee VALUES('E331', 'John', 'K.', 'White', '130 Hass Street', 'M', '1995-03-10', '2020-12-15', NULL);
+INSERT INTO Employee VALUES('E178', 'Leo', Null, 'Huffman', '221 Hass Street', 'M', '1992-05-11', '2020-12-15', NULL);
+-- Delete from Employee where Employee_ID = 'E178';
 INSERT INTO Employee VALUES('E111', 'Timon', NULL, 'Fajra', "3015 Carl Sutton Rd. Lizella, GA 31052", 'M', '1984-1-2', "2001-3-11", 'P87120');
 INSERT INTO Employee VALUES('E237', 'Chris', 'Tom', 'Frea', "68 John St. West Hurley, NY 12491", 'M', '1977-10-13', "2002-4-15", 'P93452');
 INSERT INTO Employee VALUES('E983', 'Lois', 'Christina', 'Chan', "227 S Center St Geneseo, IL 61254", 'F', '1983-7-4', "2005-10-28", 'P91283');
@@ -233,6 +238,7 @@ INSERT INTO Sell VALUES('428176', '9105437268', '8.99');
 
 # Orders
 SELECT * FROM Orders;
+INSERT INTO Orders VALUES("248194927", "S2", "E173", "EJW5342", 3, "Good!")
 INSERT INTO Shop VALUES('188753'); 
 INSERT INTO Shop VALUES('639853');
 INSERT INTO Shop VALUES('885269');
@@ -242,4 +248,4 @@ INSERT INTO Shop VALUES('428176');
 
 # Payment
 SELECT * FROM Payment;
-
+INSERT INTO  VALUES();
