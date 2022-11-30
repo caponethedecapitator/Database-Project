@@ -1,9 +1,13 @@
-#AreaManager
-SELECT * FROM AreaManager;
-INSERT INTO AreaManager VALUES('E331', "Plano");
+SELECT * FROM Customer;
+INSERT INTO Customer VALUES('C14527', "Jim",Null ,"Nguyen", '2012-01-30', 5734678921);
+INSERT INTO Customer VALUES('C21134', "Peter",Null ,"Park", '2015-11-22', 4938491723);
 
 
+SELECT * FROM DeliveryAddress;
+INSERT INTO  VALUES();
 
+SELECT * FROM PremiumMember;
+INSERT INTO  VALUES();
 
 #Employee
 SELECT * FROM Employee;
@@ -12,10 +16,79 @@ INSERT INTO Employee VALUES('E178', 'Leo', Null, 'Huffman', '221 Hass Street', '
 
 -- Delete from Employee where Employee_ID = 'E178';
 
+SELECT * FROM PhoneNumber;
+INSERT INTO  VALUES();
 
+SELECT * FROM OrdinaryCustomer;
+INSERT INTO  VALUES();
+
+SELECT * FROM SilverMember;
+INSERT INTO  VALUES();
+
+SELECT * FROM Staff;
+INSERT INTO  VALUES();
+
+SELECT * FROM AreaManager;
+INSERT INTO AreaManager VALUES('E331', "Plano");
+
+SELECT * FROM Deliverer;
+INSERT INTO  VALUES();
+
+SELECT * FROM MemberCard;
+INSERT INTO  VALUES();
+
+SELECT * FROM Vehicle;
+INSERT INTO  VALUES();
+
+SELECT * FROM MealPass;
+INSERT INTO  VALUES();
+
+SELECT * FROM Shop;
+INSERT INTO  VALUES();
+
+SELECT * FROM OpeningTime;
+INSERT INTO  VALUES();
+
+SELECT * FROM ClosingTime;
+INSERT INTO  VALUES();
+
+SELECT * FROM MakeContract;
+INSERT INTO  VALUES();
+
+SELECT * FROM Promotion;
+INSERT INTO  VALUES();
+
+SELECT * FROM Comment;
+INSERT INTO  VALUES();
+
+SELECT * FROM Restaurant;
+INSERT INTO  VALUES();
+
+SELECT * FROM RestaurantType;
+INSERT INTO  VALUES();
+
+SELECT * FROM Supermarket;
+INSERT INTO  VALUES();
+
+SELECT * FROM Product;
+INSERT INTO  VALUES();
+
+SELECT * FROM Sell;
+INSERT INTO  VALUES();
 
 SELECT * FROM Orders;
-INSERT INTO Orders VALUES(248194927, "S2", "E173", "EJW5342", 3, "Good!")
+INSERT INTO Orders VALUES("248194927", "S2", "E173", "EJW5342", 3, "Good!")
+
+SELECT * FROM Payment;
+INSERT INTO  VALUES();
+
+
+
+
+
+
+
+
 
 
 
