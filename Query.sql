@@ -7,7 +7,7 @@ FROM ((Employee
 INNER JOIN AreaManager ON Employee.Employee_ID IN (SELECT Employee_ID FROM AreaManager))
 INNER JOIN Deliverer ON Deliverer.Supervisor_ID = AreaManager.Employee_ID)
 GROUP BY AreaManager.Employee_ID
-ORDER BY COUNT(Deliverer.Supervisor_ID) DESC;
+ORDER BY Number_of_Deliverers DESC;
 
 # Find the average number of orders placed by Potential Silver Member
 SELECT AVG(Number_of_Orders) AS Average_Number_of_Orders
@@ -42,7 +42,7 @@ INNER JOIN Orders ON Orders.Employee_ID = Deliverer.Employee_ID)
 INNER JOIN Payment ON Payment.Order_ID = Orders.Order_ID)
 WHERE Payment.Payment_Time >= '2022-11-09'
 GROUP BY Deliverer.Employee_ID
-ORDER BY COUNT(Orders.Order_ID) DESC;
+ORDER BY Number_of_Orders DESC;
 
 # Find the restaurants that provide most promotion in past 1 month
 SELECT Shop.Name AS Restaurant_Name, COUNT(Promotion.Promotion_Code) AS Number_of_Promotion
@@ -105,17 +105,20 @@ FROM (Employee
 INNER JOIN PremiumMember ON Employee.Premium_Member_ID = PremiumMember.Premium_Member_ID);
 
 # Find the supermarket that have most different products in stock
-SELECT Shop.Name AS Supermarket_Name
-FROM ((Shop
-INNER JOIN Supermarket ON Shop.Shop_ID IN (SELECT Supermarket.Shop_ID))
+SELECT Shop.Name AS Supermarket_Name, Shop.Address, Shop.Business_Phone_Number, OpeningTime.Opening_Time, ClosingTime.Closing_Time,
+COUNT(Product.Product_ID) AS Number_of_Products
+FROM ((((Supermarket
+INNER JOIN Shop ON Shop.Shop_ID IN (SELECT Supermarket.Shop_ID))
+INNER JOIN OpeningTime ON OpeningTime.Shop_ID = Shop.Shop_ID)
+INNER JOIN ClosingTime ON ClosingTime.Shop_ID = Shop.Shop_ID)
 INNER JOIN Product ON Product.Shop_ID = Shop.Shop_ID)
 GROUP BY Product.Shop_ID
-ORDER BY COUNT(*) DESC
-LIMIT 1;
+ORDER BY Number_of_Products DESC;
 
 # For each product, list all the supermarket selling it, and the price of the product at the supermarket
-SELECT Product.Product_Name AS Product_Name, Shop.Name AS Supermarket_Name, Sell.PRICE AS Supermarket_Price
+SELECT Product.Product_Name AS Product_Name, Shop.Name AS Supermarket_Name, Sell.Price AS Supermarket_Price
 FROM (((Supermarket
 INNER JOIN Shop ON Shop.Shop_ID IN (SELECT Supermarket.Shop_ID))
 INNER JOIN Sell ON Sell.Shop_ID = Shop.Shop_ID)
-INNER JOIN Product ON Product.Shop_ID = Sell.Shop_ID); 
+INNER JOIN Product ON Product.Shop_ID = Sell.Shop_ID)
+GROUP BY Supermarket.Shop_ID; 
