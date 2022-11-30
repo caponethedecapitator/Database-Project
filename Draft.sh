@@ -1,1 +1,0 @@
-grep DESCRIBE EasyDelivery.sql 
