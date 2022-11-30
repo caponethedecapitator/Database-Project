@@ -105,6 +105,17 @@ FROM (Employee
 INNER JOIN PremiumMember ON Employee.Premium_Member_ID = PremiumMember.Premium_Member_ID);
 
 # Find the supermarket that have most different products in stock
-
+SELECT Shop.Name AS Supermarket_Name
+FROM ((Shop
+INNER JOIN Supermarket ON Shop.Shop_ID IN (SELECT Supermarket.Shop_ID))
+INNER JOIN Product ON Product.Shop_ID = Shop.Shop_ID)
+GROUP BY Product.Shop_ID
+ORDER BY COUNT(*) DESC
+LIMIT 1;
 
 # For each product, list all the supermarket selling it, and the price of the product at the supermarket
+SELECT Product.Product_Name AS Product_Name, Shop.Name AS Supermarket_Name, Sell.PRICE AS Supermarket_Price
+FROM (((Supermarket
+INNER JOIN Shop ON Shop.Shop_ID IN (SELECT Supermarket.Shop_ID))
+INNER JOIN Sell ON Sell.Shop_ID = Shop.Shop_ID)
+INNER JOIN Product ON Product.Shop_ID = Sell.Shop_ID); 
