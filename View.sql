@@ -1,5 +1,9 @@
 USE EasyDelivery;
-
+-- DROP VIEW Annual_Top_3_Customers;
+-- DROP VIEW Popular_Restaurant_Type;
+-- DROP VIEW Potential_Silver_Member;
+-- DROP VIEW Best_Area_Manager;
+-- DROP VIEW Top_Restaurants;
 CREATE VIEW Annual_Top_3_Customers AS
 SELECT Customer.First_Name AS Customer_First_Name, Customer.Last_Name AS Customer_Last_Name, SUM(Orders.Subtotal) AS Total_Order_Subtotal
 FROM ((Customer
@@ -9,7 +13,7 @@ WHERE Payment.Payment_Time >= '2021-12-09'
 ORDER BY Total_Order_Subtotal DESC LIMIT 3;
 
 DESCRIBE Annual_Top_3_Customers;
-DROP VIEW Annual_Top_3_Customers;
+-- DROP VIEW Annual_Top_3_Customers;
 
 CREATE VIEW Popular_Restaurant_Type AS
 SELECT RestaurantType.Restaurant_Type, COUNT(Orders.Order_ID) AS Number_of_Orders
@@ -22,7 +26,7 @@ GROUP BY RestaurantType.Restaurant_Type
 ORDER BY Number_of_Orders DESC;
 
 DESCRIBE Popular_Restaurant_Type;
-DROP VIEW Popular_Restaurant_Type;
+-- DROP VIEW Popular_Restaurant_Type;
 
 CREATE VIEW Potential_Silver_Member AS
 SELECT Customer.First_Name AS Customer_First_Name, Customer.Middle_Name AS Customer_Middle_Name, 
@@ -37,7 +41,7 @@ GROUP BY Customer.Customer_ID
 HAVING Number_of_Orders > 10;
 
 DESCRIBE Potential_Silver_Member;
-DROP VIEW Potential_Silver_Member;
+-- DROP VIEW Potential_Silver_Member;
 
 CREATE VIEW Best_Area_Manager AS
 SELECT Employee.First_Name AS Area_Manager_First_Name, Employee.Middle_Name AS Area_Manager_Middle_Name,
@@ -54,7 +58,7 @@ GROUP BY AreaManager.Employee_ID
 ORDER BY Number_of_Contracts DESC;
 
 DESCRIBE Best_Area_Manager;
-DROP VIEW Best_Area_Manager;
+-- DROP VIEW Best_Area_Manager;
 
 CREATE VIEW Top_Restaurants AS
 SELECT Shop.Name AS Restaurant_Name, Shop.Address, Shop.Business_Phone_Number, RestaurantType.Restaurant_Type, 
@@ -69,4 +73,4 @@ GROUP BY RestaurantType.Restaurant_Type
 ORDER BY Number_of_Orders DESC;
 
 DESCRIBE Top_Restaurants;
-DROP VIEW Top_Restaurants;
+-- DROP VIEW Top_Restaurants;
