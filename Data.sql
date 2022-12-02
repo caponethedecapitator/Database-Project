@@ -1,16 +1,19 @@
+# Need to include customer in Orders?
+# Product needs to be sold by restaurants as well
+
 # Customers
 SELECT * FROM Customer;
 INSERT INTO Customer VALUES('C14527', "Jim", Null ,"Nguyen", '2012-01-30', '5734678921');
 INSERT INTO Customer VALUES('C21134', "Peter", Null ,"Park", '2015-11-22', '4938491723');
-INSERT INTO Customer VALUES('C12345', "John", NULL, "Joans", '2022-10-2', '4692478579');
-INSERT INTO Customer VALUES('C12346', "Susan", "Bishop", "Mckay", '2002-6-7', '8721527870');
-INSERT INTO Customer VALUES('C22390', "Karen", "Grace", "Barns", '2010-1-1', '9345452231');
-INSERT INTO Customer VALUES('C67584', "Lucas", NULL, "McDonalds", '2009-5-3', '2478579469');
-INSERT INTO Customer VALUES('C89883', "Makayla", "Carter", "Bartmen", '2014-8-9', '1457689865');
-INSERT INTO Customer VALUES('C81232', "Adam", "Franklin", "Hubbard", '2003-2-27', '4691231233');
+INSERT INTO Customer VALUES('C12345', "John", NULL, "Joans", '2022-10-02', '4692478579');
+INSERT INTO Customer VALUES('C12346', "Susan", "Bishop", "Mckay", '2002-06-07', '8721527870');
+INSERT INTO Customer VALUES('C22390', "Karen", "Grace", "Barns", '2010-01-01', '9345452231');
+INSERT INTO Customer VALUES('C67584', "Lucas", NULL, "McDonalds", '2009-05-03', '2478579469');
+INSERT INTO Customer VALUES('C89883', "Makayla", "Carter", "Bartmen", '2014-08-09', '1457689865');
+INSERT INTO Customer VALUES('C81232', "Adam", "Franklin", "Hubbard", '2003-02-27', '4691231233');
 INSERT INTO Customer VALUES('C12334', "James", "John", "Johns", '2000-11-26', '9244576789');
-INSERT INTO Customer VALUES('C94821', "Brandon", "Grant", "Haynes", '2010-9-19', '2187787270');
-INSERT INTO Customer VALUES('C37802', "Ed", "Dylan", "Potter", '2007-1-1', '9545682231');
+INSERT INTO Customer VALUES('C94821', "Brandon", "Grant", "Haynes", '2010-09-19', '2187787270');
+INSERT INTO Customer VALUES('C37802', "Ed", "Dylan", "Potter", '2007-01-01', '9545682231');
 
 # Delivery Address
 SELECT * FROM DeliveryAddress;
@@ -52,20 +55,20 @@ INSERT INTO PremiumMember VALUES('P08234');
 SELECT * FROM Employee;
 INSERT INTO Employee VALUES('E331', 'John', 'K.', 'White', '130 Hass Street', 'M', '1995-03-10', '2020-12-15', 'P14742');
 INSERT INTO Employee VALUES('E178', 'Leo', Null, 'Huffman', '221 Hass Street', 'M', '1992-05-11', '2020-12-15', 'P74562');
-INSERT INTO Employee VALUES('E111', 'Timon', NULL, 'Fajra', "3015 Carl Sutton Rd. Lizella, GA 31052", 'M', '1984-1-2', "2001-3-11", 'P87120');
-INSERT INTO Employee VALUES('E237', 'Chris', 'Tom', 'Frea', "68 John St. West Hurley, NY 12491", 'M', '1977-10-13', "2002-4-15", 'P93452');
-INSERT INTO Employee VALUES('E983', 'Lois', 'Christina', 'Chan', "227 S Center St Geneseo, IL 61254", 'F', '1983-7-4', "2005-10-28", 'P91283');
-INSERT INTO Employee VALUES('E764', 'Hernando', 'Teddy', 'Park', "1520 W Agate Way Mustang, OK 73064", 'M', '1979-2-28', "2002-12-25", 'P23471');
-INSERT INTO Employee VALUES('E123', 'Iris', NULL, 'Dileep', "15928 W Summerwalk Dr Surprise, AZ 85374", 'F', '1979-4-16', "2009-3-19", 'P12340');
-INSERT INTO Employee VALUES('E468', 'Parsifal', 'Mancha', 'Hugo', "315 Romana Cir Hewitt, TX 76643", 'M', '1970-11-13', "2005-5-26", 'P87124');
-INSERT INTO Employee VALUES('E083', 'Phoibe', NULL, 'Alon', "Po Box 613 Ola, AR 72853", 'F', '1981-5-26', "2009-9-29", 'P12373');
-INSERT INTO Employee VALUES('E763', 'Julie', 'Sharon', 'Miller', "8401 Hiwassee St Charleston, TN 37310", 'F', '1966-9-20', "2006-6-28", 'P89947');
-INSERT INTO Employee VALUES('E394', 'Edgar', 'Angie', 'Cohen', "61 Cherry St Glens Falls, NY 12801", 'M', '1968-11-5', "2003-2-10", 'P25122');
-INSERT INTO Employee VALUES('E094', 'Brandy', 'Marcus', 'Weber', "200 E 1st St Hooks, TX 75561", 'M', '1981-7-3', "2008-10-3", 'P87234');
-INSERT INTO Employee VALUES('E875', 'Jason', 'Irvin', 'Spencer', "809 W 12th St Grafton, ND 58237", 'M', '1977-7-21', "2008-9-2", 'P34832');
-INSERT INTO Employee VALUES('E346', 'Alexander', 'Gavin', 'Lyons', "6649 N 51st Hwy Perryville, MO 63775", 'M', '1964-1-5', "2009-8-11", 'P87764');
-INSERT INTO Employee VALUES('E986', 'Kelly', 'Ira', 'Ovliver', "49 Burlington Ave Leonardo, NJ 07737", 'F', '1969-2-16', "2007-2-13", 'P51421');
-INSERT INTO Employee VALUES('E999', 'Stephan', 'Dean', 'Ryan', "16 Craig St Wayne, WV 25570", 'M', '1964-12-23', "2008-6-24", 'P91234');
+INSERT INTO Employee VALUES('E111', 'Timon', NULL, 'Fajra', "3015 Carl Sutton Rd. Lizella, GA 31052", 'M', '1984-01-02', "2001-03-11", 'P87120');
+INSERT INTO Employee VALUES('E237', 'Chris', 'Tom', 'Frea', "68 John St. West Hurley, NY 12491", 'M', '1977-10-13', "2002-04-15", 'P93452');
+INSERT INTO Employee VALUES('E983', 'Lois', 'Christina', 'Chan', "227 S Center St Geneseo, IL 61254", 'F', '1983-07-04', "2005-10-28", 'P91283');
+INSERT INTO Employee VALUES('E764', 'Hernando', 'Teddy', 'Park', "1520 W Agate Way Mustang, OK 73064", 'M', '1979-02-28', "2002-12-25", 'P23471');
+INSERT INTO Employee VALUES('E123', 'Iris', NULL, 'Dileep', "15928 W Summerwalk Dr Surprise, AZ 85374", 'F', '1979-04-16', "2009-03-19", 'P12340');
+INSERT INTO Employee VALUES('E468', 'Parsifal', 'Mancha', 'Hugo', "315 Romana Cir Hewitt, TX 76643", 'M', '1970-11-13', "2005-05-26", 'P87124');
+INSERT INTO Employee VALUES('E083', 'Phoibe', NULL, 'Alon', "Po Box 613 Ola, AR 72853", 'F', '1981-05-26', "2009-09-29", 'P12373');
+INSERT INTO Employee VALUES('E763', 'Julie', 'Sharon', 'Miller', "8401 Hiwassee St Charleston, TN 37310", 'F', '1966-09-20', "2006-06-28", 'P89947');
+INSERT INTO Employee VALUES('E394', 'Edgar', 'Angie', 'Cohen', "61 Cherry St Glens Falls, NY 12801", 'M', '1968-11-05', "2003-02-10", 'P25122');
+INSERT INTO Employee VALUES('E094', 'Brandy', 'Marcus', 'Weber', "200 E 1st St Hooks, TX 75561", 'M', '1981-07-03', "2008-10-03", 'P87234');
+INSERT INTO Employee VALUES('E875', 'Jason', 'Irvin', 'Spencer', "809 W 12th St Grafton, ND 58237", 'M', '1977-07-21', "2008-09-02", 'P34832');
+INSERT INTO Employee VALUES('E346', 'Alexander', 'Gavin', 'Lyons', "6649 N 51st Hwy Perryville, MO 63775", 'M', '1964-01-05', "2009-08-11", 'P87764');
+INSERT INTO Employee VALUES('E986', 'Kelly', 'Ira', 'Ovliver', "49 Burlington Ave Leonardo, NJ 07737", 'F', '1969-02-16', "2007-02-13", 'P51421');
+INSERT INTO Employee VALUES('E999', 'Stephan', 'Dean', 'Ryan', "16 Craig St Wayne, WV 25570", 'M', '1964-12-23', "2008-06-24", 'P91234');
 
 # Phone Number
 SELECT * FROM PhoneNumber;
@@ -131,9 +134,9 @@ INSERT INTO Deliverer VALUES('E999', 'E468');
 
 # Member Card
 SELECT * FROM MemberCard;
-INSERT INTO MemberCard VALUES('2947980455','2008-5-13', 'E083', 'C12334');
-INSERT INTO MemberCard VALUES('7293883051', '2009-1-16', 'E083', 'C94821');
-INSERT INTO MemberCard VALUES('5753926644', '2004-4-9', 'E763', 'C37802');
+INSERT INTO MemberCard VALUES('2947980455','2008-05-13', 'E083', 'C12334');
+INSERT INTO MemberCard VALUES('7293883051', '2009-01-16', 'E083', 'C94821');
+INSERT INTO MemberCard VALUES('5753926644', '2004-04-09', 'E763', 'C37802');
 
 # Vehicle
 SELECT * FROM Vehicle;
@@ -148,8 +151,8 @@ INSERT INTO Vehicle VALUES('KHI9327', 'Ford', 'Maverick', 'Black', 'E999');
 
 # Meal Pass
 SELECT * FROM MealPass;
-INSERT INTO MealPass VALUES('P88753', '2003-1-24', '2024-12-1'); 
-INSERT INTO MealPass VALUES('P39853', '2007-11-25', '2024-12-1');
+INSERT INTO MealPass VALUES('P88753', '2003-01-24', '2024-12-01'); 
+INSERT INTO MealPass VALUES('P39853', '2007-11-25', '2024-12-01');
 
 # Shop
 SELECT * FROM Shop;
@@ -180,12 +183,12 @@ INSERT INTO ClosingTime VALUES('42817', '9:00 pm');
 
 # Make Contract
 SELECT * FROM MakeContract;
-INSERT INTO MakeContract VALUES('E111', '18875', "2001-3-11");
-INSERT INTO MakeContract VALUES('E237', '63985', "2002-4-15");
+INSERT INTO MakeContract VALUES('E111', '18875', "2001-03-11");
+INSERT INTO MakeContract VALUES('E237', '63985', "2002-04-15");
 INSERT INTO MakeContract VALUES('E983', '88526', "2005-10-28");
 INSERT INTO MakeContract VALUES('E764', '19085', "2002-12-25");
-INSERT INTO MakeContract VALUES('E123', '90348', "2009-3-19");
-INSERT INTO MakeContract VALUES('E468', '42817', "2005-5-26");
+INSERT INTO MakeContract VALUES('E123', '90348', "2009-03-19");
+INSERT INTO MakeContract VALUES('E468', '42817', "2005-05-26");
 
 # Promotion 
 SELECT * FROM Promotion;
@@ -236,30 +239,35 @@ INSERT INTO Product VALUES('9105437268', '42817', 'Turkey', 'Big turkey', '34');
 
 # Sell
 SELECT * FROM Sell;
-#INSERT INTO Sell VALUES('18875', '6009633077', '10.99'); 
-#INSERT INTO Sell VALUES('63985', '6006509240', '4.99');
-#INSERT INTO Sell VALUES('63985', '6006509241', '2.99');
-#INSERT INTO Sell VALUES('88526', '0087179217', '9.99');
-INSERT INTO Sell VALUES('19085', '1694583761', '4.99');
-INSERT INTO Sell VALUES('19085', '1694583762', '5.03');
-INSERT INTO Sell VALUES('19085', '1694583763', '5.57');
-INSERT INTO Sell VALUES('90348', '2275300007', '24.99');
-INSERT INTO Sell VALUES('90348', '1694583761', '5.99');
-INSERT INTO Sell VALUES('42817', '9105437266', '9.99');
-INSERT INTO Sell VALUES('42817', '9105437267', '10.99');
-INSERT INTO Sell VALUES('42817', '9105437268', '8.99');
+#INSERT INTO Sell VALUES('18875', '6009633077', 10.99); 
+#INSERT INTO Sell VALUES('63985', '6006509240', 4.99);
+#INSERT INTO Sell VALUES('63985', '6006509241', 2.99);
+#INSERT INTO Sell VALUES('88526', '0087179217', 9.99);
+INSERT INTO Sell VALUES('19085', '1694583761', 4.99);
+INSERT INTO Sell VALUES('19085', '1694583762', 5.03);
+INSERT INTO Sell VALUES('19085', '1694583763', 5.57);
+INSERT INTO Sell VALUES('90348', '2275300007', 24.99);
+INSERT INTO Sell VALUES('90348', '1694583761', 5.99);
+INSERT INTO Sell VALUES('42817', '9105437266', 9.99);
+INSERT INTO Sell VALUES('42817', '9105437267', 10.99);
+INSERT INTO Sell VALUES('42817', '9105437268', 8.99);
 
 
-# Orders - 
+# Orders - Customer needs to order from this?
 SELECT * FROM Orders;
-INSERT INTO Orders VALUES("248194927", "S2", "E173", "EJW5342", 3, "Good!")
-INSERT INTO Shop VALUES('18875'); 
-INSERT INTO Shop VALUES('63985');
-INSERT INTO Shop VALUES('88526');
-INSERT INTO Shop VALUES('19085');
-INSERT INTO Shop VALUES('90348');
-INSERT INTO Shop VALUES('42817');
+INSERT INTO Orders VALUES("111111111#", "19085", "E331", "NEW8654", 24.95, "5 Red shirts")
+INSERT INTO Orders VALUES("111111112#", "19085", "E331", "NEW8654", 10.60, "A Blue and Green Shirts"); 
+INSERT INTO Orders VALUES("111111113#", "19085", "E331", "NEW8654", 11.14, "2 Green shirts");
+INSERT INTO Orders VALUES("111111114#", "19085", "E394", "HEL7044", 5.03, "1 Blue shirt");
+INSERT INTO Orders VALUES("111111115#", "90348", "E986", "ERI0932", 24.99, "A set of plates");
+INSERT INTO Orders VALUES("111111116#", "90348", "E986", "ERI0932", 30.98, "A set of plates and a Red Shirt");
+INSERT INTO Orders VALUES("111111117#", "90348", "E986", "ERI0932", 5.99, "A Red Shirt");
+INSERT INTO Orders VALUES("111111118#", "90348", "E986", "ERI0932", 49.98, "2 Sets of plates");
+INSERT INTO Orders VALUES("111111119#", "42817", "E999", "KHI9327", 9.99, "A chicken");
+INSERT INTO Orders VALUES("111111120#", "42817", "E999", "KHI9327", 19.98, "2 Chickens");
+INSERT INTO Orders VALUES("111111121#", "42817", "E999", "KHI9327", 20.98, "Beef and Chicken");
+INSERT INTO Orders VALUES("111111122#", "42817", "E999", "KHI9327", 8.99, "A Turkey");
 
 # Payment
 SELECT * FROM Payment;
-INSERT INTO  VALUES();
+INSERT INTO Payment VALUES(1231231234, 2022-11-04 );
