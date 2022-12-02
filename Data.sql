@@ -100,9 +100,9 @@ INSERT INTO OrdinaryCustomer VALUES('C81232');
 
 # Silver Member
 SELECT * FROM SilverMember;
-INSERT INTO DeliveryAddress VALUES('C12334', 'P88753');
-INSERT INTO DeliveryAddress VALUES('C94821', 'P39853');
-INSERT INTO DeliveryAddress VALUES('C37802', 'P08234');
+INSERT INTO SilverMember VALUES('C12334', 'P88753');
+INSERT INTO SilverMember VALUES('C94821', 'P39853');
+INSERT INTO SilverMember VALUES('C37802', 'P08234');
 
 # Staff
 SELECT * FROM Staff;
@@ -132,11 +132,13 @@ INSERT INTO Deliverer VALUES('E999', 'E468');
 # Member Card
 SELECT * FROM MemberCard;
 INSERT INTO MemberCard VALUES('2947980455','2008-5-13', 'E083', 'C12334');
-INSERT INTO MemberCard VALUES('7293883051 ', '2009-1-16', 'E083', 'C94821');
+INSERT INTO MemberCard VALUES('7293883051', '2009-1-16', 'E083', 'C94821');
 INSERT INTO MemberCard VALUES('5753926644', '2004-4-9', 'E763', 'C37802');
 
 # Vehicle
 SELECT * FROM Vehicle;
+INSERT INTO Vehicle VALUES('NEW8654', 'Toyota', 'Tacoma', 'Gray', 'E331');
+INSERT INTO Vehicle VALUES('ADD2632', 'Nissan', 'Frontier', 'Green', 'E178');
 INSERT INTO Vehicle VALUES('HEL7044', 'Toyota', 'Tacoma', 'White', 'E394');
 INSERT INTO Vehicle VALUES('LOW2312', 'Nissan', 'Frontier', 'Red', 'E094');
 INSERT INTO Vehicle VALUES('ORL5512', 'Chevy', 'Silverado', 'Silver', 'E875');
@@ -151,112 +153,112 @@ INSERT INTO MealPass VALUES('P39853', '2007-11-25', '2024-12-1');
 
 # Shop
 SELECT * FROM Shop;
-INSERT INTO Shop VALUES('188753', "Jason's Deli", '425 Coit Rd Richardson, TX 75080', '1255201447', 'E111'); -- Restaurants
-INSERT INTO Shop VALUES('639853', "McDonalds", '875 Brushback Ln Frisco, TX 75002', '3942948796', 'E237');
-INSERT INTO Shop VALUES('885269', "Olive Garden", '9813 Carter Dr Dallas, TX 70050', '6462986445', 'E983');
-INSERT INTO Shop VALUES('190859', "Walmart", '9 Monday Dr Plano, TX 75003', '1149054170', 'E764'); -- Supermarkets
-INSERT INTO Shop VALUES('903488', "Target", '1774 Independence Way El Paso, TX 75043', '9692464900', 'E123');
-INSERT INTO Shop VALUES('428176', "Sam's Club", '12 Day Ln Amarillo, TX 75088', '8732154407', 'E468');
+INSERT INTO Shop VALUES('18875', "Jason's Deli", '425 Coit Rd Richardson, TX 75080', '1255201447', 'E111'); -- Restaurants
+INSERT INTO Shop VALUES('63985', "McDonalds", '875 Brushback Ln Frisco, TX 75002', '3942948796', 'E237');
+INSERT INTO Shop VALUES('88526', "Olive Garden", '9813 Carter Dr Dallas, TX 70050', '6462986445', 'E983');
+INSERT INTO Shop VALUES('19085', "Walmart", '9 Monday Dr Plano, TX 75003', '1149054170', 'E764'); -- Supermarkets
+INSERT INTO Shop VALUES('90348', "Target", '1774 Independence Way El Paso, TX 75043', '9692464900', 'E123');
+INSERT INTO Shop VALUES('42817', "Sam's Club", '12 Day Ln Amarillo, TX 75088', '8732154407', 'E468');
 
 # Opening Time
 SELECT * FROM OpeningTime;
-INSERT INTO OpeningTime VALUES('188753', '8:00 am'); 
-INSERT INTO OpeningTime VALUES('639853', '6:30 am');
-INSERT INTO OpeningTime VALUES('885269', '10:00 am');
-INSERT INTO OpeningTime VALUES('190859', '7:00 am');
-INSERT INTO OpeningTime VALUES('903488', '8:00 am');
-INSERT INTO OpeningTime VALUES('428176', '7:00 am');
+INSERT INTO OpeningTime VALUES('18875', '8:00 am'); 
+INSERT INTO OpeningTime VALUES('63985', '6:30 am');
+INSERT INTO OpeningTime VALUES('88526', '10:00 am');
+INSERT INTO OpeningTime VALUES('19085', '7:00 am');
+INSERT INTO OpeningTime VALUES('90348', '8:00 am');
+INSERT INTO OpeningTime VALUES('42817', '7:00 am');
 
 # Closing Time
 SELECT * FROM ClosingTime;
-INSERT INTO ClosingTime VALUES('188753', '10:00 pm'); 
-INSERT INTO ClosingTime VALUES('639853', '11:59 pm');
-INSERT INTO ClosingTime VALUES('885269', '10:00 pm');
-INSERT INTO ClosingTime VALUES('190859', '11:30 pm');
-INSERT INTO ClosingTime VALUES('903488', '11:00 pm');
-INSERT INTO ClosingTime VALUES('428176', '9:00 pm');
+INSERT INTO ClosingTime VALUES('18875', '10:00 pm'); 
+INSERT INTO ClosingTime VALUES('63985', '11:59 pm');
+INSERT INTO ClosingTime VALUES('88526', '10:00 pm');
+INSERT INTO ClosingTime VALUES('19085', '11:30 pm');
+INSERT INTO ClosingTime VALUES('90348', '11:00 pm');
+INSERT INTO ClosingTime VALUES('42817', '9:00 pm');
 
 # Make Contract
 SELECT * FROM MakeContract;
-INSERT INTO MakeContract VALUES('E111', '188753', "2001-3-11");
-INSERT INTO MakeContract VALUES('E237', '639853', "2002-4-15");
-INSERT INTO MakeContract VALUES('E983', '885269', "2005-10-28");
-INSERT INTO MakeContract VALUES('E764', '190859', "2002-12-25");
-INSERT INTO MakeContract VALUES('E123', '903488', "2009-3-19");
-INSERT INTO MakeContract VALUES('E468', '428176', "2005-5-26");
+INSERT INTO MakeContract VALUES('E111', '18875', "2001-3-11");
+INSERT INTO MakeContract VALUES('E237', '63985', "2002-4-15");
+INSERT INTO MakeContract VALUES('E983', '88526', "2005-10-28");
+INSERT INTO MakeContract VALUES('E764', '19085', "2002-12-25");
+INSERT INTO MakeContract VALUES('E123', '90348', "2009-3-19");
+INSERT INTO MakeContract VALUES('E468', '42817', "2005-5-26");
 
 # Promotion 
 SELECT * FROM Promotion;
-INSERT INTO Promotion VALUES('1234567890', "Buy one lunch, get one free!", 'C12345', '188753'); 
-INSERT INTO Promotion VALUES('9874123123', "15% off with Red Card", 'C81232', '903488');
-INSERT INTO Promotion VALUES('1928356182', "Buy 5 red shirts, get a sixth free", 'C21134', '190859');
+INSERT INTO Promotion VALUES('1234567890', "Buy one lunch, get one free!", 'C12345', '18875'); 
+INSERT INTO Promotion VALUES('9874123123', "15% off with Red Card", 'C81232', '90348');
+INSERT INTO Promotion VALUES('1928356182', "Buy 5 red shirts, get a sixth free", 'C21134', '19085');
 
 # Comment
 SELECT * FROM Comment;
-INSERT INTO Comment VALUES('C14527', '188753', '1', "Did not like the sandwich at all!!!"); 
-INSERT INTO Comment VALUES('C12345', '188753', '5', "Great Restaurant! I love going here!");
-INSERT INTO Comment VALUES('C12334', '188753', '4', "Food is really good, my favorite deli!"); 
-INSERT INTO Comment VALUES('C12334', '639853', '2', "Food is bland and my fries came out cold");
-INSERT INTO Comment VALUES('C94821', '885269', '4', "Nice dining experience and server was nice");
+INSERT INTO Comment VALUES('C14527', '18875', '1', "Did not like the sandwich at all!!!"); 
+INSERT INTO Comment VALUES('C12345', '18875', '5', "Great Restaurant! I love going here!");
+INSERT INTO Comment VALUES('C12334', '18875', '4', "Food is really good, my favorite deli!"); 
+INSERT INTO Comment VALUES('C12334', '63985', '2', "Food is bland and my fries came out cold");
+INSERT INTO Comment VALUES('C94821', '88526', '4', "Nice dining experience and server was nice");
 
 # Restaurants
 SELECT * FROM Restaurant;
-INSERT INTO Restaurant VALUES('188753', 'Richardson'); 
-INSERT INTO Restaurant VALUES('639853', 'Frisco');
-INSERT INTO Restaurant VALUES('885269', 'Dallas');
+INSERT INTO Restaurant VALUES('18875', 'Richardson'); 
+INSERT INTO Restaurant VALUES('63985', 'Frisco');
+INSERT INTO Restaurant VALUES('88526', 'Dallas');
 
 # Restaurant Type
 SELECT * FROM RestaurantType;
-INSERT INTO RestaurantType VALUES('188753', 'Deli / Lunch'); 
-INSERT INTO RestaurantType VALUES('639853', 'Fast Food');
-INSERT INTO RestaurantType VALUES('885269', 'Italian Food');
+INSERT INTO RestaurantType VALUES('18875', 'Deli / Lunch'); 
+INSERT INTO RestaurantType VALUES('63985', 'Fast Food');
+INSERT INTO RestaurantType VALUES('88526', 'Italian Food');
 
 # Supermarket
 SELECT * FROM Supermarket;
-INSERT INTO Supermarket VALUES('190859');
-INSERT INTO Supermarket VALUES('903488');
-INSERT INTO Supermarket VALUES('428176');
+INSERT INTO Supermarket VALUES('19085');
+INSERT INTO Supermarket VALUES('90348');
+INSERT INTO Supermarket VALUES('42817');
 
 # Product 
 SELECT * FROM Product;
-INSERT INTO Product VALUES('6009633077', '188753', 'Reuben Sandwich', 'Beefy sandwich with chips!', '25'); 
-INSERT INTO Product VALUES('6006509240', '639853', 'Big Mac', 'A delicious burger with two patties', '50');
-INSERT INTO Product VALUES('6006509241', '639853', 'French Fries', 'Crispy Fries', '50');
-INSERT INTO Product VALUES('0087179217', '885269', 'Spagetti', 'Spagetti and Marinara', '60');
-INSERT INTO Product VALUES('1694583761', '190859', 'Red Shirt', 'A small red shirt', '24');
-INSERT INTO Product VALUES('1694583762', '190859', 'Blue Shirt', 'A small blue shirt', '24');
-INSERT INTO Product VALUES('1694583763', '190859', 'Green Shirt', 'A small green shirt', '24');
-INSERT INTO Product VALUES('2275300007', '903488', 'Plates', 'Ceramic plates for dining', '45');
-INSERT INTO Product VALUES('1694583761', '903488', 'Red Shirt', 'A small red shirt', '56');
-INSERT INTO Product VALUES('9105437266', '428176', 'Chicken', 'Yummy chicken', '34');
-INSERT INTO Product VALUES('9105437267', '428176', 'Beef', 'Fresh beef', '34');
-INSERT INTO Product VALUES('9105437268', '428176', 'Turkey', 'Big turkey', '34');
+#INSERT INTO Product VALUES('6009633077', '18875', 'Reuben Sandwich', 'Beefy sandwich with chips!', '25'); 
+#INSERT INTO Product VALUES('6006509240', '63985', 'Big Mac', 'A delicious burger with two patties', '50');
+#INSERT INTO Product VALUES('6006509241', '63985', 'French Fries', 'Crispy Fries', '50');
+#INSERT INTO Product VALUES('0087179217', '88526', 'Spagetti', 'Spagetti and Marinara', '60');
+INSERT INTO Product VALUES('1694583761', '19085', 'Red Shirt', 'A small red shirt', '24');
+INSERT INTO Product VALUES('1694583762', '19085', 'Blue Shirt', 'A small blue shirt', '24');
+INSERT INTO Product VALUES('1694583763', '19085', 'Green Shirt', 'A small green shirt', '24');
+INSERT INTO Product VALUES('2275300007', '90348', 'Plates', 'Ceramic plates for dining', '45');
+INSERT INTO Product VALUES('1694583761', '90348', 'Red Shirt', 'A small red shirt', '56');
+INSERT INTO Product VALUES('9105437266', '42817', 'Chicken', 'Yummy chicken', '34');
+INSERT INTO Product VALUES('9105437267', '42817', 'Beef', 'Fresh beef', '34');
+INSERT INTO Product VALUES('9105437268', '42817', 'Turkey', 'Big turkey', '34');
 
 # Sell
 SELECT * FROM Sell;
-INSERT INTO Sell VALUES('188753', '6009633077', '10.99'); 
-INSERT INTO Sell VALUES('639853', '6006509240', '4.99');
-INSERT INTO Sell VALUES('639853', '6006509241', '2.99');
-INSERT INTO Sell VALUES('885269', '0087179217', '9.99');
-INSERT INTO Sell VALUES('190859', '1694583761', '4.99');
-INSERT INTO Sell VALUES('190859', '1694583762', '5.03');
-INSERT INTO Sell VALUES('190859', '1694583763', '5.57');
-INSERT INTO Sell VALUES('903488', '2275300007', '24.99');
-INSERT INTO Sell VALUES('903488', '1694583761', '5.99');
-INSERT INTO Sell VALUES('428176', '9105437266', '9.99');
-INSERT INTO Sell VALUES('428176', '9105437267', '10.99');
-INSERT INTO Sell VALUES('428176', '9105437268', '8.99');
+#INSERT INTO Sell VALUES('18875', '6009633077', '10.99'); 
+#INSERT INTO Sell VALUES('63985', '6006509240', '4.99');
+#INSERT INTO Sell VALUES('63985', '6006509241', '2.99');
+#INSERT INTO Sell VALUES('88526', '0087179217', '9.99');
+INSERT INTO Sell VALUES('19085', '1694583761', '4.99');
+INSERT INTO Sell VALUES('19085', '1694583762', '5.03');
+INSERT INTO Sell VALUES('19085', '1694583763', '5.57');
+INSERT INTO Sell VALUES('90348', '2275300007', '24.99');
+INSERT INTO Sell VALUES('90348', '1694583761', '5.99');
+INSERT INTO Sell VALUES('42817', '9105437266', '9.99');
+INSERT INTO Sell VALUES('42817', '9105437267', '10.99');
+INSERT INTO Sell VALUES('42817', '9105437268', '8.99');
 
 
-# Orders
+# Orders - 
 SELECT * FROM Orders;
 INSERT INTO Orders VALUES("248194927", "S2", "E173", "EJW5342", 3, "Good!")
-INSERT INTO Shop VALUES('188753'); 
-INSERT INTO Shop VALUES('639853');
-INSERT INTO Shop VALUES('885269');
-INSERT INTO Shop VALUES('190859');
-INSERT INTO Shop VALUES('903488');
-INSERT INTO Shop VALUES('428176');
+INSERT INTO Shop VALUES('18875'); 
+INSERT INTO Shop VALUES('63985');
+INSERT INTO Shop VALUES('88526');
+INSERT INTO Shop VALUES('19085');
+INSERT INTO Shop VALUES('90348');
+INSERT INTO Shop VALUES('42817');
 
 # Payment
 SELECT * FROM Payment;
