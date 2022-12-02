@@ -1,7 +1,7 @@
-# Customers - 9
+# Customers
 SELECT * FROM Customer;
-INSERT INTO Customer VALUES('C14527', "Jim",Null ,"Nguyen", '2012-01-30', 5734678921);
-INSERT INTO Customer VALUES('C21134', "Peter",Null ,"Park", '2015-11-22', 4938491723);
+INSERT INTO Customer VALUES('C14527', "Jim", Null ,"Nguyen", '2012-01-30', '5734678921');
+INSERT INTO Customer VALUES('C21134', "Peter", Null ,"Park", '2015-11-22', '4938491723');
 INSERT INTO Customer VALUES('C12345', "John", NULL, "Joans", '2022-10-2', '4692478579');
 INSERT INTO Customer VALUES('C12346', "Susan", "Bishop", "Mckay", '2002-6-7', '8721527870');
 INSERT INTO Customer VALUES('C22390', "Karen", "Grace", "Barns", '2010-1-1', '9345452231');
@@ -12,8 +12,10 @@ INSERT INTO Customer VALUES('C12334', "James", "John", "Johns", '2000-11-26', '9
 INSERT INTO Customer VALUES('C94821', "Brandon", "Grant", "Haynes", '2010-9-19', '2187787270');
 INSERT INTO Customer VALUES('C37802', "Ed", "Dylan", "Potter", '2007-1-1', '9545682231');
 
-# Delivery Address - 9
+# Delivery Address
 SELECT * FROM DeliveryAddress;
+INSERT INTO DeliveryAddress VALUES('C14527', "123 Owl Dr. El Paso, TX 75080");
+INSERT INTO DeliveryAddress VALUES('C21134', "3021 Bellmont Dr. Springfield, CT 06532");
 INSERT INTO DeliveryAddress VALUES('C12345', "926 Sloan Dr. Allen, TX 75013");
 INSERT INTO DeliveryAddress VALUES('C12346', "5002 Midnight Dr. Stamford, CT 06902");
 INSERT INTO DeliveryAddress VALUES('C22390', "8986 Sage St. Detroit, MI 48205");
@@ -24,8 +26,10 @@ INSERT INTO DeliveryAddress VALUES('C12334', "26 Birchpond Dr. Rockledge, FL 329
 INSERT INTO DeliveryAddress VALUES('C94821', "7 Sherwood Lane Billings, MT 59101");
 INSERT INTO DeliveryAddress VALUES('C37802', "93 Hanover St. Ringgold, GA 30736");
 
-# Premium Member - 14 Employees + 3 Customers
+# Premium Member
 SELECT * FROM PremiumMember;
+INSERT INTO PremiumMember VALUES('P14742');
+INSERT INTO PremiumMember VALUES('P74562');
 INSERT INTO PremiumMember VALUES('P87120'); -- Employees
 INSERT INTO PremiumMember VALUES('P93452');
 INSERT INTO PremiumMember VALUES('P91283');
@@ -44,11 +48,10 @@ INSERT INTO PremiumMember VALUES('P88753'); -- Customers
 INSERT INTO PremiumMember VALUES('P39853');
 INSERT INTO PremiumMember VALUES('P08234');
 
-# Employee - 14 (7 for shops / 7 for restaurants)
+# Employee
 SELECT * FROM Employee;
-INSERT INTO Employee VALUES('E331', 'John', 'K.', 'White', '130 Hass Street', 'M', '1995-03-10', '2020-12-15', NULL);
-INSERT INTO Employee VALUES('E178', 'Leo', Null, 'Huffman', '221 Hass Street', 'M', '1992-05-11', '2020-12-15', NULL);
--- Delete from Employee where Employee_ID = 'E178';
+INSERT INTO Employee VALUES('E331', 'John', 'K.', 'White', '130 Hass Street', 'M', '1995-03-10', '2020-12-15', 'P14742');
+INSERT INTO Employee VALUES('E178', 'Leo', Null, 'Huffman', '221 Hass Street', 'M', '1992-05-11', '2020-12-15', 'P74562');
 INSERT INTO Employee VALUES('E111', 'Timon', NULL, 'Fajra', "3015 Carl Sutton Rd. Lizella, GA 31052", 'M', '1984-1-2', "2001-3-11", 'P87120');
 INSERT INTO Employee VALUES('E237', 'Chris', 'Tom', 'Frea', "68 John St. West Hurley, NY 12491", 'M', '1977-10-13', "2002-4-15", 'P93452');
 INSERT INTO Employee VALUES('E983', 'Lois', 'Christina', 'Chan', "227 S Center St Geneseo, IL 61254", 'F', '1983-7-4', "2005-10-28", 'P91283');
@@ -64,8 +67,10 @@ INSERT INTO Employee VALUES('E346', 'Alexander', 'Gavin', 'Lyons', "6649 N 51st 
 INSERT INTO Employee VALUES('E986', 'Kelly', 'Ira', 'Ovliver', "49 Burlington Ave Leonardo, NJ 07737", 'F', '1969-2-16', "2007-2-13", 'P51421');
 INSERT INTO Employee VALUES('E999', 'Stephan', 'Dean', 'Ryan', "16 Craig St Wayne, WV 25570", 'M', '1964-12-23', "2008-6-24", 'P91234');
 
-# Phone Number - 15 (7 for shops / 7 for restaurants) + 1 person with 2
+# Phone Number
 SELECT * FROM PhoneNumber;
+INSERT INTO PhoneNumber VALUES('E331', '3215435795');
+INSERT INTO PhoneNumber VALUES('E178', '9143486318');
 INSERT INTO PhoneNumber VALUES('E111', '3484582167'); -- Shops
 INSERT INTO PhoneNumber VALUES('E237', '4897395680');
 INSERT INTO PhoneNumber VALUES('E983', '8511382904');
@@ -82,8 +87,10 @@ INSERT INTO PhoneNumber VALUES('E986', '4347201295');
 INSERT INTO PhoneNumber VALUES('E999', '0870477626');
 INSERT INTO PhoneNumber VALUES('E999', '0787733671');
 
-# Ordinary Customer - 6 out of the 9 customers
+# Ordinary Customer
 SELECT * FROM OrdinaryCustomer;
+INSERT INTO OrdinaryCustomer VALUES('C14527');
+INSERT INTO OrdinaryCustomer VALUES('C21134');
 INSERT INTO OrdinaryCustomer VALUES('C12345');
 INSERT INTO OrdinaryCustomer VALUES('C12346');
 INSERT INTO OrdinaryCustomer VALUES('C22390');
@@ -91,18 +98,18 @@ INSERT INTO OrdinaryCustomer VALUES('C67584');
 INSERT INTO OrdinaryCustomer VALUES('C89883');
 INSERT INTO OrdinaryCustomer VALUES('C81232');
 
-# Silver Member - 3 out of the 9 customers
+# Silver Member
 SELECT * FROM SilverMember;
 INSERT INTO DeliveryAddress VALUES('C12334', 'P88753');
 INSERT INTO DeliveryAddress VALUES('C94821', 'P39853');
 INSERT INTO DeliveryAddress VALUES('C37802', 'P08234');
 
-# Staff - (14 - (6 mngrs) - (6 Delivers)) = 2
+# Staff
 SELECT * FROM Staff;
 INSERT INTO Staff VALUES('E083');
 INSERT INTO Staff VALUES('E763');
 
-# Area Manager - 6 
+# Area Manager
 SELECT * FROM AreaManager;
 INSERT INTO AreaManager VALUES('E111', 'Richardson');
 INSERT INTO AreaManager VALUES('E237', 'Frisco');
@@ -111,8 +118,10 @@ INSERT INTO AreaManager VALUES('E764', 'Plano');
 INSERT INTO AreaManager VALUES('E123', 'El Paso');
 INSERT INTO AreaManager VALUES('E468', 'Amarillo');
 
-# Deliverer - 6 Disjoint wiht AreaManager and Staff
+# Deliverer
 SELECT * FROM Deliverer;
+INSERT INTO Deliverer VALUES('E331', 'E111');
+INSERT INTO Deliverer VALUES('E178', 'E983');
 INSERT INTO Deliverer VALUES('E394', 'E111');
 INSERT INTO Deliverer VALUES('E094', 'E237');
 INSERT INTO Deliverer VALUES('E875', 'E983');
@@ -120,7 +129,7 @@ INSERT INTO Deliverer VALUES('E346', 'E764');
 INSERT INTO Deliverer VALUES('E986', 'E123');
 INSERT INTO Deliverer VALUES('E999', 'E468');
 
-# Member Card - 3 issued by staff
+# Member Card
 SELECT * FROM MemberCard;
 INSERT INTO MemberCard VALUES('2947980455','2008-5-13', 'E083', 'C12334');
 INSERT INTO MemberCard VALUES('7293883051 ', '2009-1-16', 'E083', 'C94821');
@@ -135,12 +144,12 @@ INSERT INTO Vehicle VALUES('DIM7621', 'Toyota', 'Tacoma', 'Gray', 'E346');
 INSERT INTO Vehicle VALUES('ERI0932', 'Ford', 'F150', 'Blue', 'E986');
 INSERT INTO Vehicle VALUES('KHI9327', 'Ford', 'Maverick', 'Black', 'E999');
 
-# Meal Pass - 2 out of 3 customers
+# Meal Pass
 SELECT * FROM MealPass;
 INSERT INTO MealPass VALUES('P88753', '2003-1-24', '2024-12-1'); 
 INSERT INTO MealPass VALUES('P39853', '2007-11-25', '2024-12-1');
 
-# Shop - 6 (3 Restaurants and 3 Supermarkets)
+# Shop
 SELECT * FROM Shop;
 INSERT INTO Shop VALUES('188753', "Jason's Deli", '425 Coit Rd Richardson, TX 75080', '1255201447', 'E111'); -- Restaurants
 INSERT INTO Shop VALUES('639853', "McDonalds", '875 Brushback Ln Frisco, TX 75002', '3942948796', 'E237');
@@ -167,7 +176,7 @@ INSERT INTO ClosingTime VALUES('190859', '11:30 pm');
 INSERT INTO ClosingTime VALUES('903488', '11:00 pm');
 INSERT INTO ClosingTime VALUES('428176', '9:00 pm');
 
-# Make Contract - Only with Area Managers
+# Make Contract
 SELECT * FROM MakeContract;
 INSERT INTO MakeContract VALUES('E111', '188753', "2001-3-11");
 INSERT INTO MakeContract VALUES('E237', '639853', "2002-4-15");
@@ -176,18 +185,21 @@ INSERT INTO MakeContract VALUES('E764', '190859', "2002-12-25");
 INSERT INTO MakeContract VALUES('E123', '903488', "2009-3-19");
 INSERT INTO MakeContract VALUES('E468', '428176', "2005-5-26");
 
-# Promotion - 2
+# Promotion 
 SELECT * FROM Promotion;
 INSERT INTO Promotion VALUES('1234567890', "Buy one lunch, get one free!", 'C12345', '188753'); 
 INSERT INTO Promotion VALUES('9874123123', "15% off with Red Card", 'C81232', '903488');
+INSERT INTO Promotion VALUES('1928356182', "Buy 5 red shirts, get a sixth free", 'C21134', '190859');
 
 # Comment
 SELECT * FROM Comment;
-INSERT INTO Comment VALUES('C12345', '188753', '5', "Great Restaurant! I love going here!"); 
+INSERT INTO Comment VALUES('C14527', '188753', '1', "Did not like the sandwich at all!!!"); 
+INSERT INTO Comment VALUES('C12345', '188753', '5', "Great Restaurant! I love going here!");
+INSERT INTO Comment VALUES('C12334', '188753', '4', "Food is really good, my favorite deli!"); 
 INSERT INTO Comment VALUES('C12334', '639853', '2', "Food is bland and my fries came out cold");
 INSERT INTO Comment VALUES('C94821', '885269', '4', "Nice dining experience and server was nice");
 
-# Restaurants - 3
+# Restaurants
 SELECT * FROM Restaurant;
 INSERT INTO Restaurant VALUES('188753', 'Richardson'); 
 INSERT INTO Restaurant VALUES('639853', 'Frisco');
@@ -205,7 +217,7 @@ INSERT INTO Supermarket VALUES('190859');
 INSERT INTO Supermarket VALUES('903488');
 INSERT INTO Supermarket VALUES('428176');
 
-# Product - 12 
+# Product 
 SELECT * FROM Product;
 INSERT INTO Product VALUES('6009633077', '188753', 'Reuben Sandwich', 'Beefy sandwich with chips!', '25'); 
 INSERT INTO Product VALUES('6006509240', '639853', 'Big Mac', 'A delicious burger with two patties', '50');
