@@ -26,8 +26,8 @@ grep DROP EasyDelivery.sql
 # DROP TABLE Supermarket;
 # DROP TABLE Product;
 # DROP TABLE Sell;
-# DROP TABLE Orders CASCADE;
-# DROP TABLE Payment CASCADE;
+# DROP TABLE Orders;
+# DROP TABLE Payment;
 
 
 grep DROP View.sql

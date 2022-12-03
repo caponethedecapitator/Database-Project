@@ -1,9 +1,9 @@
 USE EasyDelivery;
--- DROP VIEW Annual_Top_3_Customers;
--- DROP VIEW Popular_Restaurant_Type;
--- DROP VIEW Potential_Silver_Member;
--- DROP VIEW Best_Area_Manager;
--- DROP VIEW Top_Restaurants;
+DROP VIEW Annual_Top_3_Customers;
+DROP VIEW Popular_Restaurant_Type;
+DROP VIEW Potential_Silver_Member;
+DROP VIEW Best_Area_Manager;
+DROP VIEW Top_Restaurants;
 CREATE VIEW Annual_Top_3_Customers AS
 SELECT Customer.First_Name AS Customer_First_Name, Customer.Last_Name AS Customer_Last_Name, SUM(Orders.Subtotal) AS Total_Order_Subtotal
 FROM ((Customer
