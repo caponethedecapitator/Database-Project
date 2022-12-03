@@ -12,7 +12,7 @@ ORDER BY Number_of_Deliverers DESC;
 # Find the average number of orders placed by Potential Silver Member
 SELECT AVG(Number_of_Orders) AS Average_Number_of_Orders
 FROM Potential_Silver_Member;
-
+Select * FROM Potential_Silver_Member;
 # Find all the customers who placed orders of the restaurants that belong to Popular Restaurant Type. Please also report the name of restaurants. 
 SELECT Customer.First_Name AS Customer_First_Name, Customer.Middle_Name AS Customer_Middle_Name, 
 Customer.Last_Name AS Customer_Last_Name, Shop.Name AS Restaurant_Name

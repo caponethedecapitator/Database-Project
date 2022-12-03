@@ -1,9 +1,9 @@
 USE EasyDelivery;
-DROP VIEW Annual_Top_3_Customers;
-DROP VIEW Popular_Restaurant_Type;
-DROP VIEW Potential_Silver_Member;
-DROP VIEW Best_Area_Manager;
-DROP VIEW Top_Restaurants;
+-- DROP VIEW Annual_Top_3_Customers;
+-- DROP VIEW Popular_Restaurant_Type;
+-- DROP VIEW Potential_Silver_Member;
+-- DROP VIEW Best_Area_Manager;
+-- DROP VIEW Top_Restaurants;
 CREATE VIEW Annual_Top_3_Customers AS
 SELECT Customer.First_Name AS Customer_First_Name, Customer.Last_Name AS Customer_Last_Name, SUM(Orders.Subtotal) AS Total_Order_Subtotal
 FROM ((Customer
@@ -28,6 +28,7 @@ ORDER BY Number_of_Orders DESC;
 DESCRIBE Popular_Restaurant_Type;
 -- DROP VIEW Popular_Restaurant_Type;
 
+DROP VIEW Potential_Silver_Member;
 CREATE VIEW Potential_Silver_Member AS
 SELECT Customer.First_Name AS Customer_First_Name, Customer.Middle_Name AS Customer_Middle_Name, 
 Customer.Last_Name AS Customer_Last_Name, Customer.Joining_Date, Customer.Phone_Number, 
@@ -36,12 +37,12 @@ FROM (((Customer
 INNER JOIN DeliveryAddress ON DeliveryAddress.Customer_ID = Customer.Customer_ID)
 INNER JOIN SilverMember ON Customer.Customer_ID NOT IN (SELECT Customer_ID FROM SilverMember))
 INNER JOIN Payment ON Customer.Customer_ID = Payment.Customer_ID)
-WHERE Payment.Payment_Time >= '2022-11-09'
+WHERE Payment.Payment_Time >= '2020-11-09'
 GROUP BY Customer.Customer_ID
-HAVING Number_of_Orders > 10;
+HAVING Number_of_Orders > 3;
+Select * from Potential_Silver_Member;
+-- DESCRIBE Potential_Silver_Member;
 
-DESCRIBE Potential_Silver_Member;
--- DROP VIEW Potential_Silver_Member;
 
 CREATE VIEW Best_Area_Manager AS
 SELECT Employee.First_Name AS Area_Manager_First_Name, Employee.Middle_Name AS Area_Manager_Middle_Name,

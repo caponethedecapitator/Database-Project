@@ -251,7 +251,7 @@ INSERT INTO Sell VALUES('42817', '9105437266', 9.99);
 INSERT INTO Sell VALUES('42817', '9105437267', 10.99);
 INSERT INTO Sell VALUES('42817', '9105437268', 8.99);
 
-
+SELECT * FROM Vehicle;
 # Orders - Customer needs to order from this?
 SELECT * FROM Orders;
 INSERT INTO Orders VALUES("111111111#", "19085", "E331", "NEW8654", 24.95, "5 Red shirts");
