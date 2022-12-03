@@ -18,32 +18,32 @@ Select * from Annual_Top_3_Customers;
 
 CREATE VIEW Popular_Restaurant_Type AS
 SELECT RestaurantType.Restaurant_Type, COUNT(Orders.Order_ID) AS Number_of_Orders
-FROM (((Restaurant
-INNER JOIN RestaurantType ON RestaurantType.Shop_ID = Restaurant.Shop_ID)
-INNER JOIN Orders ON Orders.Shop_ID IN (SELECT Shop_ID FROM Restaurant))
-INNER JOIN Payment ON Orders.Order_ID = Payment.Order_ID)
-wHERE Payment.Payment_Time >= '2021-12-09'
+FROM Restaurant, RestaurantType, Orders, Payment
+WHERE Payment.Payment_Time >= '2021-12-09'
+and RestaurantType.Shop_ID = Restaurant.Shop_ID
+and Orders.Shop_ID IN (SELECT Shop_ID FROM Restaurant)
+and Orders.Order_ID = Payment.Order_ID
 GROUP BY RestaurantType.Restaurant_Type
 ORDER BY Number_of_Orders DESC;
 
 Select * from Popular_Restaurant_Type;
 -- DROP VIEW Popular_Restaurant_Type;
 
-DROP VIEW Potential_Silver_Member;
+
 CREATE VIEW Potential_Silver_Member AS
 SELECT Customer.First_Name AS Customer_First_Name, Customer.Middle_Name AS Customer_Middle_Name, 
 Customer.Last_Name AS Customer_Last_Name, Customer.Joining_Date, Customer.Phone_Number, 
 DeliveryAddress.Delivery_Address, COUNT(Payment.Order_ID) AS Number_of_Orders
-FROM (((Customer
+FROM ((Customer
 INNER JOIN DeliveryAddress ON DeliveryAddress.Customer_ID = Customer.Customer_ID)
-INNER JOIN SilverMember ON Customer.Customer_ID NOT IN (SELECT Customer_ID FROM SilverMember))
 INNER JOIN Payment ON Customer.Customer_ID = Payment.Customer_ID)
-WHERE Payment.Payment_Time >= '2020-11-09'
+WHERE Payment.Payment_Time >= '2022-11-09'
+and Customer.Customer_ID NOT IN (SELECT Customer_ID FROM SilverMember)
 GROUP BY Customer.Customer_ID
-HAVING Number_of_Orders > 3;
+HAVING Number_of_Orders > 10;
 
 Select * from Potential_Silver_Member;
--- Select * from Potential_Silver_Member;
+
 
 
 CREATE VIEW Best_Area_Manager AS
