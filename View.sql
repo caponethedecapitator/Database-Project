@@ -76,4 +76,4 @@ GROUP BY RestaurantType.Restaurant_Type
 ORDER BY Number_of_Orders DESC;
 
 Select * from Top_Restaurants;
--- DROP VIEW Top_Restaurants; 
+-- DROP VIEW Top_Restaurants;

@@ -45,3 +45,10 @@ SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 
 Error Code: 1140. In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'easydelivery.customer.First_Name'; this is incompatible with sql_mode=only_full_group_by
+
+
+# In the Annual_Top_3_Customers View
+# '''
+# GROUP BY Customer.Customer_ID
+# '''
+# is missed
