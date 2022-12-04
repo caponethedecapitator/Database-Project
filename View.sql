@@ -21,13 +21,15 @@ SELECT RestaurantType.Restaurant_Type, COUNT(Orders.Order_ID) AS Number_of_Order
 FROM Restaurant, RestaurantType, Orders, Payment
 WHERE Payment.Payment_Time >= '2021-12-09'
 AND RestaurantType.Shop_ID = Restaurant.Shop_ID
+AND Orders.Shop_ID = RestaurantType.Shop_ID
 AND Orders.Shop_ID IN (SELECT Shop_ID FROM Restaurant)
 AND Orders.Order_ID = Payment.Order_ID
 GROUP BY RestaurantType.Restaurant_Type
-ORDER BY Number_of_Orders DESC;
-Select * from RestaurantType;
+ORDER BY Number_of_Orders DESC LIMIT 1;
+
 Select * from Popular_Restaurant_Type;
-DROP VIEW Popular_Restaurant_Type;
+-- DROP VIEW Popular_Restaurant_Type;
+
 
 SELECT RestaurantType.Restaurant_Type, COUNT(Orders.Order_ID) AS Number_of_Orders
 FROM Restaurant, RestaurantType, Orders, Payment
@@ -56,11 +58,11 @@ Select * from Potential_Silver_Member;
 
 
 CREATE VIEW Best_Area_Manager AS
-SELECT distinct Employee.First_Name AS Area_Manager_First_Name, Employee.Middle_Name AS Area_Manager_Middle_Name,
+SELECT Employee.First_Name AS Area_Manager_First_Name, Employee.Middle_Name AS Area_Manager_Middle_Name,
 Employee.Last_Name AS Area_Manager_Last_Name, Employee.Address, Employee.Gender, Employee.Date_of_Birth,
 Employee.Designation_Start_Date, PhoneNumber.Phone_Number, COUNT(MakeContract.Shop_ID) AS Number_of_Contracts
 FROM ((((Employee
-INNER JOIN AreaManager ON Employee.Employee_ID IN (SELECT Employee_ID FROM AreaManager))
+INNER JOIN AreaManager ON Employee.Employee_ID = AreaManager.Employee_ID)
 INNER JOIN PhoneNumber ON PhoneNumber.Employee_ID = Employee.Employee_ID)
 INNER JOIN Restaurant ON Restaurant.Restaurant_Area = AreaManager.Area)
 INNER JOIN MakeContract ON (AreaManager.Employee_ID = MakeContract.Employee_ID
@@ -73,16 +75,16 @@ Select * from Best_Area_Manager;
 -- DROP VIEW Best_Area_Manager;
 
 CREATE VIEW Top_Restaurants AS
-SELECT distinct Shop.Name AS Restaurant_Name, Shop.Address, Shop.Business_Phone_Number, RestaurantType.Restaurant_Type, 
+SELECT Shop.Name AS Restaurant_Name, Shop.Address, Shop.Business_Phone_Number, RestaurantType.Restaurant_Type, 
 COUNT(Orders.Order_ID) AS Number_of_Orders
 FROM (((Shop
-INNER JOIN Restaurant ON Shop.Shop_ID IN (SELECT Shop_ID FROM Restaurant))
+INNER JOIN Restaurant ON Shop.Shop_ID = Restaurant.Shop_ID)
 INNER JOIN RestaurantType ON Restaurant.Shop_ID = RestaurantType.Shop_ID)
-INNER JOIN Orders ON Orders.Shop_ID IN (SELECT Shop_ID FROM Restaurant))
+INNER JOIN Orders ON Orders.Shop_ID = Restaurant.Shop_ID)
 INNER JOIN Payment ON Orders.Order_ID = Payment.Order_ID
 WHERE Payment.Payment_Time >= '2022-11-09'
 GROUP BY RestaurantType.Restaurant_Type
 ORDER BY Number_of_Orders DESC;
 
 Select * from Top_Restaurants;
-DROP VIEW Top_Restaurants;
+-- DROP VIEW Top_Restaurants;
