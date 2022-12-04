@@ -2,12 +2,13 @@ USE EasyDelivery;
 
 # Find the names of employee who supervises the most number of deliverers
 SELECT Employee.First_Name AS Employee_First_Name, Employee.Middle_Name AS Employee_Middle_Name, 
-Employee.Last_Name AS Employee_Last_Name, COUNT(Deliverer.Supervisor_ID) AS Number_of_Deliverers 
+Employee.Last_Name AS Employee_Last_Name, COUNT(Deliverer.Supervisor_ID) AS Number_of_Deliverers
 FROM ((Employee
 INNER JOIN AreaManager ON Employee.Employee_ID = AreaManager.Employee_ID)
 INNER JOIN Deliverer ON Deliverer.Supervisor_ID = AreaManager.Employee_ID)
 GROUP BY AreaManager.Employee_ID
-ORDER BY Number_of_Deliverers DESC LIMIT 1;
+ORDER BY Number_of_Deliverers DESC;
+
 
 # Find the average number of orders placed by Potential Silver Member
 SELECT AVG(Number_of_Orders) AS Average_Number_of_Orders
@@ -43,10 +44,10 @@ INNER JOIN Orders ON Orders.Employee_ID = Deliverer.Employee_ID)
 INNER JOIN Payment ON Payment.Order_ID = Orders.Order_ID)
 WHERE Payment.Payment_Time >= '2022-11-09'
 GROUP BY Deliverer.Employee_ID
-ORDER BY Number_of_Orders DESC LIMIT 1;
+ORDER BY Number_of_Orders DESC;
 
 # Find the restaurants that provide most promotion in past 1 month
-SELECT Shop.Name AS Restaurant_Name, COUNT(Promotion.Promotion_Code) AS Number_of_Promotion
+SELECT DISTINCT Shop.Name AS Restaurant_Name, COUNT(Promotion.Promotion_Code) AS Number_of_Promotion
 FROM ((((((Shop
 INNER JOIN Restaurant ON Shop.Shop_ID IN (SELECT Shop_ID FROM Restaurant))
 INNER JOIN OpeningTime ON OpeningTime.Shop_ID = Shop.Shop_ID)
@@ -56,7 +57,7 @@ INNER JOIN Orders ON Orders.Shop_ID = Shop.Shop_ID)
 INNER JOIN Payment ON Payment.Order_ID = Orders.Order_ID)
 WHERE Payment.Payment_Time >= '2022-11-09'
 GROUP BY Restaurant.Shop_ID
-ORDER BY Number_of_Promotion DESC LIMIT 1;
+ORDER BY Number_of_Promotion DESC;
 
 # Find the customer who have place orders of all Fast Food restaurants
 SELECT Distinct Customer.First_Name AS Customer_First_Name, Customer.Middle_Name AS Customer_Middle_Name, Customer.Last_Name AS Customer_Last_Name
@@ -85,7 +86,7 @@ INNER JOIN Shop ON Shop.Shop_ID = Restaurant.Shop_ID);
 SELECT Restaurant.Restaurant_Area AS Area, COUNT(Restaurant.Shop_ID) AS Number_of_Restaurants
 FROM Restaurant
 GROUP BY Area
-ORDER BY Number_of_Restaurants DESC LIMIT 1;
+ORDER BY Number_of_Restaurants DESC;
 
 # Find the schedule of the restaurant that have the most orders in past 1 month
 SELECT Shop.Name AS Restaurant_Name, OpeningTime.Opening_Time, ClosingTime.Closing_Time, COUNT(Orders.Order_ID) AS Number_of_Orders
@@ -113,7 +114,7 @@ INNER JOIN OpeningTime ON OpeningTime.Shop_ID = Shop.Shop_ID)
 INNER JOIN ClosingTime ON ClosingTime.Shop_ID = Shop.Shop_ID)
 INNER JOIN Product ON Product.Shop_ID = Shop.Shop_ID)
 GROUP BY Product.Shop_ID
-ORDER BY Number_of_Products DESC LIMIT 1;
+ORDER BY Number_of_Products DESC;
 
 # For each product, list all the supermarket selling it, and the price of the product at the supermarket
 SELECT Product.Product_Name AS Product_Name, Shop.Name AS Supermarket_Name, Sell.Price AS Supermarket_Price
