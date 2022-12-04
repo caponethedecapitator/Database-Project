@@ -61,15 +61,13 @@ CREATE VIEW Best_Area_Manager AS
 SELECT Employee.First_Name AS Area_Manager_First_Name, Employee.Middle_Name AS Area_Manager_Middle_Name,
 Employee.Last_Name AS Area_Manager_Last_Name, Employee.Address, Employee.Gender, Employee.Date_of_Birth,
 Employee.Designation_Start_Date, PhoneNumber.Phone_Number, COUNT(MakeContract.Shop_ID) AS Number_of_Contracts
-FROM ((((Employee
+FROM ((Employee
 INNER JOIN AreaManager ON Employee.Employee_ID = AreaManager.Employee_ID)
 INNER JOIN PhoneNumber ON PhoneNumber.Employee_ID = Employee.Employee_ID)
-INNER JOIN Restaurant ON Restaurant.Restaurant_Area = AreaManager.Area)
-INNER JOIN MakeContract ON (AreaManager.Employee_ID = MakeContract.Employee_ID
-AND Restaurant.Shop_ID = MakeContract.Shop_ID))
+INNER JOIN MakeContract ON AreaManager.Employee_ID = MakeContract.Employee_ID
 WHERE MakeContract.Contract_Start_Time >= '2021-12-09'
 GROUP BY AreaManager.Employee_ID
-ORDER BY Number_of_Contracts DESC;
+ORDER BY Number_of_Contracts DESC LIMIT 1;
 
 Select * from Best_Area_Manager;
 -- DROP VIEW Best_Area_Manager;
