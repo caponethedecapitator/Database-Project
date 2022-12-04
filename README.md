@@ -4,3 +4,8 @@ SQL code for database project with regard to the graduate course.\
 [View.sql](View.sql) is used for creating corresponding views.\
 [Query.sql](Query.sql) is used for creating specified queries.\
 [Data.sql](Data.sql) is used for inserting/updating test samples.
+
+
+
+# Instruction: 
+Run [EasyDelivery.sql](EasyDelivery.sql), then [Data.sql](Data.sql)
