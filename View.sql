@@ -20,9 +20,9 @@ CREATE VIEW Popular_Restaurant_Type AS
 SELECT RestaurantType.Restaurant_Type, COUNT(Orders.Order_ID) AS Number_of_Orders
 FROM Restaurant, RestaurantType, Orders, Payment
 WHERE Payment.Payment_Time >= '2021-12-09'
-and RestaurantType.Shop_ID = Restaurant.Shop_ID
-and Orders.Shop_ID IN (SELECT Shop_ID FROM Restaurant)
-and Orders.Order_ID = Payment.Order_ID
+AND RestaurantType.Shop_ID = Restaurant.Shop_ID
+AND Orders.Shop_ID IN (SELECT Shop_ID FROM Restaurant)
+AND Orders.Order_ID = Payment.Order_ID
 GROUP BY RestaurantType.Restaurant_Type
 ORDER BY Number_of_Orders DESC;
 Select * from RestaurantType;
