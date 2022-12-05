@@ -8,4 +8,4 @@ SQL code for database project with regard to the graduate course.\
 
 
 # Instruction: 
-Run [EasyDelivery.sql](EasyDelivery.sql), then [Data.sql](Data.sql)
+Run [EasyDelivery.sql](EasyDelivery.sql), then [Data.sql](Data.sql) to insert data, then we get [View.sql](View.sql)&[Query.sql](Query.sql) to answer the questions.
