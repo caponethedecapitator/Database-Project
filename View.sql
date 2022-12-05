@@ -5,13 +5,13 @@ USE EasyDelivery;
 -- DROP VIEW Best_Area_Manager;
 -- DROP VIEW Top_Restaurants;
 CREATE VIEW Annual_Top_3_Customers AS
-SELECT Customer.First_Name AS Customer_First_Name, Customer.Last_Name AS Customer_Last_Name, SUM(Orders.Subtotal) AS Total_Order_Subtotal
+SELECT Customer.First_Name AS Customer_First_Name, Customer.Last_Name AS Customer_Last_Name, SUM(Orders.Subtotal) AS Order_Subtotal
 FROM ((Customer
 INNER JOIN Payment ON Customer.Customer_ID = Payment.Customer_ID)
 INNER JOIN Orders ON Orders.Order_ID = Payment.Order_ID)
 WHERE Payment.Payment_Time >= '2021-12-09'
 GROUP BY Customer.Customer_ID
-ORDER BY Total_Order_Subtotal DESC LIMIT 3;
+ORDER BY Order_Subtotal DESC LIMIT 3;
 
 Select * from Annual_Top_3_Customers;
 -- DROP VIEW Annual_Top_3_Customers;
