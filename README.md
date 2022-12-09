@@ -21,7 +21,8 @@ Run [EasyDelivery.sql](EasyDelivery.sql), then [Data.sql](Data.sql) to insert da
 ## Questions: 
 1. Is the ability to model superclass/subclass relationships likely to be important in the shopping mall management system like above? Why or why not?
 
-
+    A: The ability to model superclass/subclass relationships is very important. By using this ability, we can create entities more specifically and deduce relationships more accurately.
+    
 2. Can you think of 5 more business rules (other than those explicitly described above) that are likely to be used in a shopping mall environment? Add your rules to the above requirement to be implemented.
 
 
