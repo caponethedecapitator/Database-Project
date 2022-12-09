@@ -24,8 +24,9 @@ Run [EasyDelivery.sql](EasyDelivery.sql), then [Data.sql](Data.sql) to insert da
     A: The ability to model superclass/subclass relationships is very important. By using this ability, we can delineate a hierarchical structure based on our project design. We can create concrete entities more specifically and deduce complex relationships more accurately.
     
 2. Can you think of 5 more business rules (other than those explicitly described above) that are likely to be used in a shopping mall environment? Add your rules to the above requirement to be implemented.
-
-
+  
+    A: need to be updated
+    
 3. Justify using a Relational DBMS like Oracle for this project (Successfully design a relational database system, show all the design in final report).
 
     A: Aleardy Done.
