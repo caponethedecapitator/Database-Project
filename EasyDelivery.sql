@@ -1,3 +1,4 @@
+# Database Project by Eric Hale, Qiawen Wang, Ouyang Xu
 DROP DATABASE EasyDelivery;
 CREATE DATABASE EasyDelivery;
 USE EasyDelivery;

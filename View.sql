@@ -56,7 +56,6 @@ HAVING Number_of_Orders > 10;
 Select * from Potential_Silver_Member;
 
 
-
 CREATE VIEW Best_Area_Manager AS
 SELECT Employee.First_Name AS Area_Manager_First_Name, Employee.Middle_Name AS Area_Manager_Middle_Name,
 Employee.Last_Name AS Area_Manager_Last_Name, Employee.Address, Employee.Gender, Employee.Date_of_Birth,
